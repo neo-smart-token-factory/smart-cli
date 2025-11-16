@@ -1,0 +1,25 @@
+{
+  "name": "neo-forge-cli",
+  "version": "0.5.1",
+  "description": "NΞØ SMART FACTORY — CLI Tool",
+  "bin": {
+    "neo-forge": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "blockchain",
+    "tokens",
+    "neo-smart-factory"
+  ],
+  "author": "NΞØ Protocol",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^16.4.0",
+    "inquirer": "^9.2.0"
+  }
+}
+
