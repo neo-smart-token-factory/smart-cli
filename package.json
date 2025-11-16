@@ -1,6 +1,32 @@
 {
   "name": "neo-smart-factory",
   "version": "0.5.1",
-  "description": "NΞØ SMART FACTORY — PATCH v0.5.1 – IGNIÇÃO (Preço Fixo)"
+  "description": "NΞØ SMART FACTORY — PATCH v0.5.1 – IGNIÇÃO",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "node": "hardhat node",
+    "verify": "hardhat verify"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart-contracts",
+    "factory",
+    "tokens",
+    "defi",
+    "nft",
+    "vesting",
+    "rewards"
+  ],
+  "author": "NΞØ Protocol",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.0"
+  }
 }
-

@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+artifacts/
+cache/
+typechain-types/
+
+# Hardhat
+cache/
+artifacts/
+typechain-types/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Deploy info
+deploy-*.json
+deploy-info.json
+
+# Tokens (manter estrutura, ignorar conteúdo sensível)
+tokens/*.json
+!tokens/README.md
+!tokens/template.json
+
+# Internal ops (manter estrutura, ignorar dados sensíveis)
+internal-ops/tokens/*.json
+!internal-ops/tokens/template.json
+internal-ops/marketing/*.json
