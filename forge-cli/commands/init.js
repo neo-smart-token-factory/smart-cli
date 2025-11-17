@@ -59,9 +59,35 @@ NETWORK=${answers.network}
 
   fs.writeFileSync('.env', envContent);
   
+  // Criar estrutura do token em tokens/
+  const tokenDir = path.join(process.cwd(), '..', 'tokens', answers.tokenName.toLowerCase());
+  if (!fs.existsSync(tokenDir)) {
+    fs.mkdirSync(tokenDir, { recursive: true });
+    fs.mkdirSync(path.join(tokenDir, 'contracts'), { recursive: true });
+    fs.mkdirSync(path.join(tokenDir, 'scripts'), { recursive: true });
+    fs.mkdirSync(path.join(tokenDir, 'docs'), { recursive: true });
+    fs.mkdirSync(path.join(tokenDir, 'ui'), { recursive: true });
+  }
+
+  // Salvar configuração do token
+  const tokenConfig = {
+    name: answers.tokenName,
+    symbol: answers.tokenSymbol,
+    supply: answers.tokenSupply,
+    price: answers.tokenPrice,
+    network: answers.network,
+    createdAt: new Date().toISOString()
+  };
+
+  fs.writeFileSync(
+    path.join(tokenDir, 'token-config.json'),
+    JSON.stringify(tokenConfig, null, 2)
+  );
+
   console.log('\n✅ Configuração salva em .env');
+  console.log(`✅ Estrutura criada em tokens/${answers.tokenName.toLowerCase()}/`);
   console.log('\nPróximos passos:');
   console.log('  1. Configure PRIVATE_KEY e RPC_URL no .env');
-  console.log('  2. Execute: neo-forge deploy');
+  console.log('  2. Execute: neo-smart-factory deploy');
 };
 

@@ -1,9 +1,9 @@
 {
-  "name": "neo-forge-cli",
+  "name": "neo-smart-factory-cli",
   "version": "0.5.1",
   "description": "NΞØ SMART FACTORY — CLI Tool",
   "bin": {
-    "neo-forge": "./bin/index.js"
+    "neo-smart-factory": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

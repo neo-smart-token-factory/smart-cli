@@ -62,8 +62,8 @@ cp .env.example .env
 cd forge-cli
 npm install
 npm link  # ou npm install -g .
-neo-forge init
-neo-forge deploy
+neo-smart-factory init
+neo-smart-factory deploy
 ```
 
 #### Via Scripts:
@@ -99,11 +99,21 @@ Veja `internal-ops/COMMANDS.md` para documentação completa.
 
 ## 📚 Documentação
 
-- [Manifesto](docs/manifesto.md)
-- [Arquitetura](docs/architecture.md)
-- [Patch v0.5.1](docs/patch-v0.5.1.md)
-- [Changelog](docs/changelog.md)
-- [Comandos Internos](internal-ops/COMMANDS.md)
+📖 **[Índice Completo da Documentação](docs/INDEX.md)** — Navegação rápida
+
+### Documentação Principal
+- [Manifesto](docs/manifesto.md) — Visão, valores e missão
+- [Arquitetura Técnica](docs/architecture.md) — Arquitetura detalhada
+- [Arquitetura Cirúrgica](docs/ARCHITECTURE_SURGICAL.md) — Descrição cirúrgica de cada bloco
+- [Base Repository](docs/BASE_REPOSITORY.md) — Base técnica purificada
+- [Nomenclatura](docs/NOMENCLATURA.md) — Padrões e convenções de nomenclatura
+- [Patch v0.5.1](docs/patch-v0.5.1.md) — Notas do patch
+- [Changelog](docs/changelog.md) — Histórico de mudanças
+
+### Documentação de Módulos
+- [Comandos Internos](internal-ops/COMMANDS.md) — Sistema interno de operações
+- [forge-ui](forge-ui/README.md) — Interface web
+- [tokens](tokens/README.md) — Estrutura de tokens criados
 
 ## 🏗️ Componentes
 
@@ -128,8 +138,8 @@ Interface web para criação de tokens.
 Ferramenta CLI para criação e deploy.
 
 **Comandos:**
-- `neo-forge init` — Inicializar novo token
-- `neo-forge deploy` — Deploy de token
+- `neo-smart-factory init` — Inicializar novo token
+- `neo-smart-factory deploy` — Deploy de token
 
 ### internal-ops
 Sistema interno de operações (ChatGPT).
@@ -156,6 +166,17 @@ Sistema interno de operações (ChatGPT).
 ## 📄 Licença
 
 MIT
+
+## 🏗️ Base Técnica
+
+Este projeto é baseado no repositório [erc20-token-generator](https://github.com/Smart-Contracts-Solutions/erc20-token-generator) (SmartContracts.Tools), que foi:
+
+- ✅ **Purificado**: Removido código demo e bloat
+- ✅ **Padronizado**: Adaptado para Polygon
+- ✅ **Transformado**: ERC20 básico → `NeoTokenBase.sol`
+- ✅ **Expandido**: Estrutura modular completa
+
+Veja `docs/BASE_REPOSITORY.md` para detalhes técnicos.
 
 ## 🤝 Contribuindo
 
