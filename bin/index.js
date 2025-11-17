@@ -11,7 +11,7 @@ const deployCommand = require('../commands/deploy');
 const program = new Command();
 
 program
-  .name('neo-forge')
+  .name('neo-smart-factory')
   .description('NΞØ SMART FACTORY CLI')
   .version('0.5.1');
 

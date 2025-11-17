@@ -12,7 +12,7 @@ module.exports = async function deploy(options) {
   
   if (missing.length > 0) {
     console.error('❌ Variáveis de ambiente faltando:', missing.join(', '));
-    console.log('Execute: neo-forge init');
+    console.log('Execute: neo-smart-factory init');
     process.exit(1);
   }
 
