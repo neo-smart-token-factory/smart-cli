@@ -1,0 +1,99 @@
+{
+  "version": "0.5.1",
+  "codename": "IGNIÇÃO",
+  "status": "development",
+  "forge": {
+    "core": {
+      "status": "completed",
+      "version": "0.5.1",
+      "completed_at": "2024-01-01T00:00:00Z",
+      "notes": "Contrato principal NeoSmartFactory purificado e funcional"
+    },
+    "templates": {
+      "status": "completed",
+      "version": "0.5.1",
+      "completed_at": "2024-01-01T00:00:00Z",
+      "notes": "Templates de tokens ERC20/ERC721, vesting e recompensas ativados"
+    },
+    "environment": {
+      "status": "completed",
+      "version": "0.5.1",
+      "completed_at": "2024-01-01T00:00:00Z",
+      "notes": "Ambiente Polygon configurado, Hardhat configurado"
+    },
+    "cli": {
+      "status": "pending",
+      "version": null,
+      "notes": "CLI com init(), generator(), deploy() pendente"
+    },
+    "frontend": {
+      "status": "pending",
+      "version": null,
+      "notes": "Interface web para criação de protocolos pendente"
+    },
+    "testing": {
+      "status": "in_progress",
+      "version": "0.5.1",
+      "notes": "Testes básicos implementados, cobertura expandida pendente"
+    }
+  },
+  "tokens": {
+    "pending": [
+      {
+        "name": "WOD",
+        "status": "draft",
+        "created_at": "2024-01-01T00:00:00Z",
+        "last_updated": "2024-01-01T00:00:00Z"
+      },
+      {
+        "name": "FLUXX",
+        "status": "draft",
+        "created_at": "2024-01-01T00:00:00Z",
+        "last_updated": "2024-01-01T00:00:00Z"
+      },
+      {
+        "name": "NEOFLOW",
+        "status": "concept",
+        "created_at": "2024-01-01T00:00:00Z",
+        "last_updated": "2024-01-01T00:00:00Z"
+      },
+      {
+        "name": "TEST_TOKEN",
+        "status": "draft",
+        "created_at": "2026-01-20T12:40:41.739Z",
+        "last_updated": "2026-01-20T12:40:41.739Z"
+      }
+    ],
+    "deployed": []
+  },
+  "marketing": {
+    "last_update": "2024-01-01T00:00:00Z",
+    "headlines": [
+      "A fábrica que transforma intenção em protocolo.",
+      "Uma fábrica que opera no presente, mas foi construída para sobreviver ao colapso de plataformas."
+    ],
+    "narrative": "No subterrâneo invisível da economia digital, enquanto o mercado corre atrás de trends obsoletos, surge uma arquitetura silenciosa que une inteligência, automação, tokenização e engenharia cultural: NΞØ SMART FACTORY."
+  },
+  "risks": [
+    {
+      "level": "low",
+      "category": "technical",
+      "description": "Dependência de OpenZeppelin para segurança",
+      "mitigation": "Usar versões auditadas e manter atualizado"
+    }
+  ],
+  "next_actions": [
+    "Expandir cobertura de testes",
+    "Implementar CLI básica",
+    "Criar interface web MVP",
+    "Documentar casos de uso avançados"
+  ],
+  "branding": {
+    "status": "active",
+    "frontend_name": "NΞØ SMART FACTORY",
+    "backend_name": "NEO Smart Factory",
+    "protocol_name": "NΞØ Protocol",
+    "ecosystem_name": "NEOFLW Ecosystem",
+    "ens_domain": "nsfactory.eth"
+  }
+}
