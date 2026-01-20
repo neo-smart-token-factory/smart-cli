@@ -167,7 +167,7 @@ class TokenSimulator {
   updateState(tokenName, status) {
     const state = JSON.parse(fs.readFileSync(this.statePath, 'utf8'));
     const tokenIndex = state.tokens.pending.findIndex(t => t.name === tokenName);
-    
+
     if (tokenIndex >= 0) {
       state.tokens.pending[tokenIndex].status = status;
       state.tokens.pending[tokenIndex].last_updated = new Date().toISOString();
@@ -212,7 +212,7 @@ class TokenSimulator {
   calculateReadiness(token) {
     const completeness = this.calculateCompleteness(token);
     const hasAudit = token.audit && token.audit.status !== 'pending';
-    
+
     if (completeness === 100 && hasAudit) return 'ready';
     if (completeness >= 70) return 'almost_ready';
     if (completeness >= 40) return 'in_progress';
@@ -328,18 +328,18 @@ class TokenSimulator {
 
   estimateGas(token) {
     let gas = 2500000; // Base para token ERC20
-    
+
     if (token.technical.mintable) gas += 50000;
     if (token.technical.burnable) gas += 30000;
     if (token.technical.pausable) gas += 40000;
-    
+
     // Vesting
     const vestingCount = Object.keys(token.tokenomics.vesting || {}).length;
     gas += vestingCount * 150000;
-    
+
     // Rewards
     if (token.dapp && token.dapp.planned) gas += 2000000;
-    
+
     return gas;
   }
 
@@ -351,26 +351,26 @@ class TokenSimulator {
 
   listComponents(token) {
     const components = ['Token ERC20'];
-    
+
     if (token.tokenomics.vesting) components.push('Vesting');
     if (token.dapp && token.dapp.planned) components.push('dApp');
     if (token.pool && token.pool.planned) components.push('Liquidity Pool');
     if (token.technical.governance) components.push('Governance');
-    
+
     return components;
   }
 
   getDeploymentWarnings(token) {
     const warnings = [];
-    
+
     if (!token.audit || token.audit.status === 'pending') {
       warnings.push('Auditoria não realizada');
     }
-    
+
     if (this.calculateCompleteness(token) < 100) {
       warnings.push('Token incompleto');
     }
-    
+
     return warnings;
   }
 
