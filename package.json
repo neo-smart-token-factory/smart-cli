@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ops": "node bin/index.js"
+    "ops": "node bin/index.js",
+    "dev": "node bin/index.js",
+    "start": "node bin/index.js"
   },
   "repository": {
     "type": "git",

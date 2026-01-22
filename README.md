@@ -1,111 +1,66 @@
-# NΞØ Internal Ops App v0.1
+# NΞØ SMART FACTORY CLI (nxf)
 
-> **Painel Invisível de Operações Internas**
+> **Unified Command Line Interface for Web3 Protocol Operations.**
 
-Sistema de comandos interno para gerenciar tokens pendentes, acompanhar progresso e gerar conteúdo de marketing em tempo real.
+A interface oficial para desenvolvedores e operadores do ecossistema NΞØ. Projetada para ser rápida, segura e com uma estética premium.
 
-## 🎯 Visão Geral
+## 🚀 Instalação para Desenvolvedores
 
-O **NΞØ Internal Ops App** é um sistema de comandos que funciona dentro do ChatGPT, permitindo:
+Para trabalhar no projeto localmente e usar o comando `nxf` globalmente no seu terminal:
 
-1. **Testar tokens pendentes** antes do deploy
-2. **Acompanhar progresso** da construção da factory
-3. **Gerar conteúdo de marketing** automaticamente
+```bash
+# 1. Clone o repositório
+git clone https://github.com/neo-smart-token-factory/smart-cli.git
+cd smart-cli
 
-## 📋 Comandos Disponíveis
+# 2. Instale as dependências
+npm install
 
-### 1. Token Testing Module
-
-```
-NEO::token simulate <TOKEN_NAME>
-NEO::token draft <TOKEN_NAME>
-NEO::token manifest <TOKEN_NAME>
-NEO::token deploy-preview <TOKEN_NAME>
-NEO::token audit <TOKEN_NAME>
-NEO::token economics <TOKEN_NAME>
-NEO::token narrative <TOKEN_NAME>
-NEO::token rituals <TOKEN_NAME>
+# 3. Vincule o comando ao seu sistema
+npm link
 ```
 
-### 2. Build Log Module
+Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
 
-```
-NEO::status
-NEO::progress
-NEO::version
-NEO::next
-NEO::risks
-```
+## 🩺 Diagnóstico e Saúde (Doctor)
 
-### 3. Marketing Engine Module
+O comando `doctor` é a ferramenta de inteligência operacional para garantir que tudo está pronto para produção.
 
-```
-NEO::marketing update "<mensagem>"
-NEO::marketing headline
-NEO::marketing story
-NEO::marketing log
-NEO::marketing post <platform> <tipo>
+```bash
+nxf doctor --deep --contract 0x...
 ```
 
-Onde:
-- `platform`: `x`, `linkedin`, `flowoff`, `website`
-- `tipo`: `technical`, `announcement`, `narrative`, `update`
+## 📦 Comandos Principais
 
-## 🔧 Como Usar
+| Comando | Descrição |
+| :--- | :--- |
+| `nxf init` | Inicializa um novo ambiente de token. |
+| `nxf deploy` | Executa o deploy dos contratos inteligentes. |
+| `nxf doctor` | Diagnóstico de saúde e auditoria do protocolo. |
+| `nxf simulate` | Simulação completa do ecossistema do token (Econ/Risk). |
+| `nxf status` | Verifica o progresso do desenvolvimento da fábrica. |
 
-Simplesmente digite o comando no chat. O sistema irá:
+## 🛠️ Desenvolvimento
 
-1. Processar o comando
-2. Buscar informações relevantes
-3. Gerar resposta formatada
-4. Atualizar logs internos
+Para rodar o comando em modo de desenvolvimento sem instalá-lo globalmente:
 
-## 📊 Estrutura de Dados
-
-Os dados são armazenados em:
-- `internal-ops/tokens/` - Tokens pendentes
-- `internal-ops/logs/` - Logs de progresso
-- `internal-ops/marketing/` - Conteúdo gerado
-- `internal-ops/state.json` - Estado atual do projeto
-
-## 🚀 Exemplos
-
-### Testar um Token
-
-```
-NEO::token simulate WOD
+```bash
+npm run dev -- [comando]
+# Exemplo: npm run dev -- doctor
 ```
 
-Retorna:
-- Tokenômica proposta
-- Supply e distribuição
-- Vesting schedules
-- Riscos identificados
-- Recomendações
+## 📢 Marketing Automático
 
-### Verificar Status
+A CLI também serve como motor de narrativa, gerando conteúdo para redes sociais baseado no estado real do código.
 
-```
-NEO::status
+```bash
+nxf marketing update "Nova funcionalidade X implementada"
 ```
 
-Retorna:
-- Versão atual
-- Progresso da FORGE
-- Itens concluídos
-- Pendências
-- Próximas ações
-- Sugestões de marketing
+---
 
-### Gerar Conteúdo
+## 💼 Licença
 
-```
-NEO::marketing update "deploy do token WOD em andamento"
-```
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-Retorna:
-- Textos para diferentes plataformas
-- Updates técnicos
-- Explicações jornalísticas
-- Posts formatados
-
+**NΞØ Protocol** — *Expand until silence becomes structure.*
