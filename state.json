@@ -1,6 +1,6 @@
 {
-  "version": "0.5.1",
-  "codename": "IGNIÇÃO",
+  "version": "0.5.3",
+  "codename": "MULTICHAIN FOUNDATION",
   "status": "development",
   "forge": {
     "core": {
@@ -22,9 +22,9 @@
       "notes": "Ambiente Polygon configurado, Hardhat configurado"
     },
     "cli": {
-      "status": "pending",
-      "version": null,
-      "notes": "CLI com init(), generator(), deploy() pendente"
+      "status": "completed",
+      "version": "0.5.3",
+      "notes": "CLI unificada com init(), deploy(), simulate() e o novo módulo doctor() operacional"
     },
     "frontend": {
       "status": "pending",
