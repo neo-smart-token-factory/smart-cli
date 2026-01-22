@@ -7,6 +7,7 @@
 const { Command } = require('commander');
 const initCommand = require('../commands/init');
 const deployCommand = require('../commands/deploy');
+const doctorCommand = require('../commands/doctor');
 const NeoInternalOps = require('../ops-handler');
 
 const program = new Command();
@@ -29,6 +30,14 @@ program
   .description('Executar deploy de contratos')
   .option('-n, --network <network>', 'Network (base/polygon/arbitrum)', 'base')
   .action(deployCommand);
+
+program
+  .command('doctor')
+  .description('Diagnóstico e auditoria de saúde do protocolo')
+  .option('-d, --deep', 'Executar scan profundo (requer rede)', false)
+  .option('-c, --contract <address>', 'Endereço do contrato para analisar')
+  .option('-o, --output <file>', 'Exportar relatório (md/pdf)')
+  .action(doctorCommand);
 
 // Internal Ops & Simulation Commands
 program

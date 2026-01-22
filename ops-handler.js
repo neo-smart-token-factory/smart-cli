@@ -7,6 +7,7 @@ const TokenSimulator = require('./scripts/token-simulator');
 const BuildLog = require('./scripts/build-log');
 const MarketingEngine = require('./scripts/marketing-engine');
 const EcosystemSimulator = require('./scripts/ecosystem-simulator');
+const DoctorEngine = require('./scripts/doctor-engine');
 
 class NeoInternalOps {
   constructor() {
@@ -14,6 +15,7 @@ class NeoInternalOps {
     this.buildLog = new BuildLog();
     this.marketingEngine = new MarketingEngine();
     this.ecosystemSimulator = new EcosystemSimulator();
+    this.doctorEngine = new DoctorEngine();
   }
 
   /**
@@ -50,6 +52,8 @@ class NeoInternalOps {
           return this.handleBuildLogCommand(module);
         case 'marketing':
           return this.handleMarketingCommand(action, args);
+        case 'doctor':
+          return this.handleDoctorCommand(action, args);
         default:
           return { error: `Módulo '${module}' não reconhecido` };
       }
@@ -169,6 +173,27 @@ class NeoInternalOps {
       default:
         return { error: `Ação '${action}' não reconhecida` };
     }
+  }
+
+  /**
+   * Processa comandos do módulo Doctor
+   */
+  handleDoctorCommand(action, args) {
+    const options = {};
+    if (args && args.includes('--deep')) options.deep = true;
+    const contractIndex = args ? args.indexOf('--contract') : -1;
+    if (contractIndex !== -1 && args[contractIndex + 1]) {
+      options.contract = args[contractIndex + 1];
+    }
+
+    const results = this.doctorEngine.diagnose(options);
+
+    // Se for um comando simples NEO::doctor sem ação específica, retorna formatado
+    if (!action || action === 'scan' || (action && !action.startsWith('--'))) {
+      return this.doctorEngine.formatResponse(results);
+    }
+
+    return results;
   }
 
   /**

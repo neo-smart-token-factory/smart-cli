@@ -394,6 +394,39 @@ NEO::marketing story WOD
 
 ---
 
+## 🩺 Módulo 4: Doctor CLI
+
+### `NEO::doctor [action] [args...]`
+
+**Diagnóstico e auditoria de saúde do protocolo.**
+
+Executa uma verificação completa da saúde técnica e operacional:
+
+**A. Verificação de Ambiente:**
+- Arquivos .env e package.json.
+- Configurações de rede.
+
+**B. Smart Scan (requer --deep e --contract):**
+- Bytecode integrity.
+- Initializable check.
+- Proxy integrity.
+
+**C. Security Pulse:**
+- Rolestack (permissões).
+- Ownership trail.
+
+**D. Gas Optimization:**
+- Benchmark de Mint.
+- Sugeridor de janela de operação.
+
+**Exemplo:**
+```
+NEO::doctor
+NEO::doctor scan --deep --contract 0x...
+```
+
+---
+
 ## 📝 Notas
 
 - Todos os comandos são case-insensitive
