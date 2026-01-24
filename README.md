@@ -22,17 +22,26 @@ npm link
 
 Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
 
-## 📦 Comandos Principais (v0.5.3)
-
-| Comando | Descrição | Status |
-| :--- | :--- | :--- |
-| `nxf init` | Inicializa um novo ambiente de token. | ✅ Phase 1 |
-| `nxf token draft` | Cria rascunho de token (tokens/*.json). | ✅ Phase 1 |
-| `nxf simulate` | Simulação completa (Security/Econ/Risk). | ✅ Phase 1 |
-| `nxf token forge` | **Deploy Real (Phase 2 Bridge)** via smart-core. | 🚀 Production |
-| `nxf doctor` | Diagnóstico de saúde e auditoria do protocolo. | ✅ Phase 1 |
-| `nxf marketing` | Motor de narrativa e geração de conteúdo. | ✅ Phase 1 |
-| `nxf status` | Verifica o progresso e estado da factory. | ✅ Phase 1 |
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ▓▓▓ COMANDOS PRINCIPAIS (v0.5.3)                                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ └─ nxf init                                                                 │
+│    └─ Inicializa um novo ambiente de token (Phase 1)                        │
+│ └─ nxf token draft                                                          │
+│    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
+│ └─ nxf simulate                                                             │
+│    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
+│ └─ nxf token forge                                                          │
+│    └─ Deploy Real (Phase 2 Bridge) via smart-core (Production)              │
+│ └─ nxf doctor                                                               │
+│    └─ Diagnóstico de saúde e auditoria do protocolo (Phase 1)               │
+│ └─ nxf marketing                                                            │
+│    └─ Motor de narrativa e geração de conteúdo (Phase 1)                    │
+│ └─ nxf status                                                               │
+│    └─ Verifica o progresso e estado da factory (Phase 1)                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ## 🔵 Phase 2 Integration (Web3 Bridge)
 
