@@ -1,12 +1,12 @@
 # NΞØ SMART FACTORY CLI (nxf)
 
-> **Unified Command Line Interface for Web3 Protocol Operations.**
+> **Official Forge & Operations Engine for the NΞØ Protocol.**
 
-A interface oficial para desenvolvedores e operadores do ecossistema NΞØ. Projetada para ser rápida, segura e com uma estética premium.
+A interface unificada para desenvolvedores e operadores da **NΞØ SMART FACTORY**. Projetada como o "cérebro operacional" do ecossistema, permitindo simulação, auditoria, deploy e gestão narrativa de protocolos Web3 diretamente pelo terminal.
 
-## 🚀 Instalação para Desenvolvedores
+## 🚀 Instalação (Development Mode)
 
-Para trabalhar no projeto localmente e usar o comando `nxf` globalmente no seu terminal:
+Para contribuir com o projeto localmente e ativar o comando `nxf` globalmente:
 
 ```bash
 # 1. Clone o repositório
@@ -22,45 +22,46 @@ npm link
 
 Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
 
-## 🩺 Diagnóstico e Saúde (Doctor)
+## 📦 Comandos Principais (v0.5.3)
 
-O comando `doctor` é a ferramenta de inteligência operacional para garantir que tudo está pronto para produção.
+| Comando | Descrição | Status |
+| :--- | :--- | :--- |
+| `nxf init` | Inicializa um novo ambiente de token. | ✅ Phase 1 |
+| `nxf token draft` | Cria rascunho de token (tokens/*.json). | ✅ Phase 1 |
+| `nxf simulate` | Simulação completa (Security/Econ/Risk). | ✅ Phase 1 |
+| `nxf token forge` | **Deploy Real (Phase 2 Bridge)** via smart-core. | 🚀 Production |
+| `nxf doctor` | Diagnóstico de saúde e auditoria do protocolo. | ✅ Phase 1 |
+| `nxf marketing` | Motor de narrativa e geração de conteúdo. | ✅ Phase 1 |
+| `nxf status` | Verifica o progresso e estado da factory. | ✅ Phase 1 |
 
-```bash
-nxf doctor --deep --contract 0x...
-```
+## 🔵 Phase 2 Integration (Web3 Bridge)
 
-## 📦 Comandos Principais
-
-| Comando | Descrição |
-| :--- | :--- |
-| `nxf init` | Inicializa um novo ambiente de token. |
-| `nxf deploy` | Executa o deploy dos contratos inteligentes. |
-| `nxf doctor` | Diagnóstico de saúde e auditoria do protocolo. |
-| `nxf simulate` | Simulação completa do ecossistema do token (Econ/Risk). |
-| `nxf status` | Verifica o progresso do desenvolvimento da fábrica. |
-
-## 🛠️ Desenvolvimento
-
-Para rodar o comando em modo de desenvolvimento sem instalá-lo globalmente:
+A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nxf token forge` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
 
 ```bash
-npm run dev -- [comando]
-# Exemplo: npm run dev -- doctor
+# Executar deploy real com validação de segurança automática
+nxf token forge NOME_DO_TOKEN
 ```
 
-## 📢 Marketing Automático
+## 🛠️ Tech Stack & Standards
 
-A CLI também serve como motor de narrativa, gerando conteúdo para redes sociais baseado no estado real do código.
-
-```bash
-nxf marketing update "Nova funcionalidade X implementada"
-```
+Este projeto segue rigorosamente os **.neodevstandards**:
+- **Core:** Node.js 기반 Unified CLI.
+- **Engine:** Integração profunda com Hardhat via `smart-core`.
+- **Security:** Bloqueio automático de deploys em caso de risco crítico.
+- **Narrative:** Geração automática de manifestos e rituais.
 
 ---
 
-## 💼 Licença
+<div align="center">
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+## NΞØ SMART FACTORY
 
-**NΞØ Protocol** — *Expand until silence becomes structure.*
+**Transformando código em ativos líquidos.**
+
+[![Website](https://img.shields.io/badge/Website-neosmart.space-D8F244?style=flat-square&logo=internet-explorer&logoColor=000)](https://neosmart.space)
+[![GitHub](https://img.shields.io/badge/GitHub-neo--smart--token--factory-C0E030?style=flat-square&logo=github&logoColor=000)](https://github.com/neo-smart-token-factory)
+[![Twitter](https://img.shields.io/badge/Twitter-@neosmartfactory-A8C81C?style=flat-square&logo=twitter&logoColor=000)](https://x.com/neosmartfactory)
+[![Email](https://img.shields.io/badge/Email-neosmart.factory@gmail.com-90B008?style=flat-square&logo=gmail&logoColor=000)](mailto:neosmart.factory@gmail.com)
+
+</div>
