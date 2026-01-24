@@ -555,9 +555,20 @@ class EcosystemSimulator {
     };
   }
 
+  _getNarrativeString(token) {
+    const m = token.narrative?.manifesto;
+    const s = token.narrative?.story || '';
+    if (typeof m === 'string') return m || s;
+    if (m && typeof m === 'object') {
+      const parts = [m.title, m.introduction, m.vision, m.technical_philosophy, m.community].filter(Boolean);
+      return parts.join(' ') || s;
+    }
+    return s;
+  }
+
   checkNEOProtocolIntegration(token) {
-    const narrative = token.narrative?.manifesto || token.narrative?.story || '';
-    const hasNEO = narrative.toLowerCase().includes('neo') || 
+    const narrative = this._getNarrativeString(token);
+    const hasNEO = narrative.toLowerCase().includes('neo') ||
                    narrative.toLowerCase().includes('nξø') ||
                    token.name.toUpperCase().includes('NEO');
 
@@ -573,8 +584,7 @@ class EcosystemSimulator {
   }
 
   checkNEOTokenIntegration(token) {
-    // Verificar se token se conecta com NEO Token (se existir)
-    const narrative = token.narrative?.manifesto || '';
+    const narrative = this._getNarrativeString(token);
     const hasNEOToken = narrative.toLowerCase().includes('neo token');
 
     return {
@@ -587,9 +597,9 @@ class EcosystemSimulator {
   }
 
   checkFlowOFFNarrative(token) {
-    const narrative = token.narrative?.manifesto || token.narrative?.story || '';
+    const narrative = this._getNarrativeString(token);
     const flowoffKeywords = ['flowoff', 'cultura', 'ritual', 'narrativa', 'engenharia'];
-    const hasFlowOFF = flowoffKeywords.some(keyword => 
+    const hasFlowOFF = flowoffKeywords.some(keyword =>
       narrative.toLowerCase().includes(keyword)
     );
 
@@ -607,6 +617,7 @@ class EcosystemSimulator {
   checkTokenManifesto(token) {
     const manifesto = token.narrative?.manifesto;
     const story = token.narrative?.story;
+    const narrativeStr = this._getNarrativeString(token);
 
     if (!manifesto && !story) {
       return {
@@ -616,7 +627,7 @@ class EcosystemSimulator {
       };
     }
 
-    const length = (manifesto || story || '').length;
+    const length = typeof narrativeStr === 'string' ? narrativeStr.length : 0;
     const isSubstantial = length > 200;
 
     return {

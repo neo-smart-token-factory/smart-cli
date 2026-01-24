@@ -242,5 +242,11 @@ DEPLOYMENT READY: ❌ NÃO
 
 ---
 
+## Notas técnicas
+
+- **Manifesto**: O simulador aceita `narrative.manifesto` como **objeto** (gerado por `NEO::token manifest`) ou como string. A narrativa é normalizada internamente (`_getNarrativeString`) para checagens de integração NΞØ, FlowOFF e substancialidade do manifesto.
+
+---
+
 **O Mini-Simulador de Ecossistemas é OBRIGATÓRIO antes de qualquer deploy real. Ele garante que o token está seguro, bem configurado e pronto para o mercado.**
 
