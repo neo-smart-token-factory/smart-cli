@@ -15,57 +15,67 @@ NEO::simulate <TOKEN_NAME>
 ### A. Segurança
 
 #### 1. Supply Faz Sentido?
+
 - ✅ Supply não é zero
 - ✅ Supply não é excessivamente alto (risco de overflow)
 - ✅ Supply não é muito baixo (problemas de divisibilidade)
 - ✅ Supply está dentro de limites seguros
 
 #### 2. Owner Não É Zero?
+
 - ✅ Owner configurado
 - ✅ Owner não é zero address
 - ✅ Formato de endereço válido
 
 #### 3. Preço Fixo Não É Zero?
+
 - ✅ Preço configurado (ou intencionalmente zero)
 - ✅ Preço não é zero por erro
 - ✅ Preço faz sentido para o modelo
 
 #### 4. Travas Estão Adequadas?
+
 - ✅ Mintable controlado (governança ou max supply)
 - ✅ Pausable disponível para emergências
 - ✅ Burnable configurado se necessário
 - ✅ Sem riscos de mint infinito
 
 #### 5. Wallet Já Está Conectada?
+
 - ✅ Owner configurado indica wallet conectada
 - ⚠️ Verificar conexão real antes do deploy
 
 ### B. Tokenômica
 
 #### 1. O Modelo Faz Sentido?
+
 - ✅ Distribuição não excede supply
 - ✅ Distribuição representa pelo menos 50% do supply
 - ✅ Concentração da equipe < 60%
 - ✅ Modelo é sustentável
 
 #### 2. Tem Risco de Mint Infinito?
+
 - ⚠️ Se mintable sem governança → ALTO RISCO
 - ⚠️ Se mintable sem max supply → ALTO RISCO
 - ✅ Mintable com governança → Risco controlado
 - ✅ Mintable com max supply → Risco controlado
 
 #### 3. Há Risco de Exploit?
+
 - ⚠️ Mint sem controle de governança
 - ⚠️ Sem vesting (tokens podem ser vendidos imediatamente)
 - ⚠️ Sem pausable (não há como parar em caso de exploit)
 - ✅ Mecanismos de proteção adequados
 
 #### 4. Existe Overflow?
+
 - ✅ Supply * 10^decimals não causa overflow
 - ✅ Operações matemáticas seguras
 - ✅ Limites respeitados
 
 #### 5. Distribuição Válida?
+
 - ✅ Soma da distribuição ≤ supply total
 - ✅ Percentuais calculados corretamente
 - ✅ Tokens não distribuídos identificados
@@ -73,21 +83,25 @@ NEO::simulate <TOKEN_NAME>
 ### C. Rituais e Comportamento
 
 #### 1. Mint 1x Por Wallet Faz Sentido?
+
 - ✅ Se mintable → considerar mint 1x para distribuição equitativa
 - ✅ Se não mintable → não precisa de restrição
 - ⚠️ Evitar contradições (não mintable mas com restrição)
 
 #### 2. Supply Inicial Não Explode Economia?
+
 - ⚠️ Concentração da equipe > 50% → risco de dump
 - ⚠️ Supply muito alto → diluição de valor
 - ✅ Supply adequado para price discovery
 
 #### 3. Preço Fixo Não Cria Barreira?
+
 - ⚠️ Preço muito alto → limita adoção inicial
 - ✅ Preço adequado ou modelo dinâmico
 - ✅ Preço zero (gratuito) se intencional
 
 #### 4. Há Necessidade de Vesting?
+
 - 🔒 **OBRIGATÓRIO** se há alocação para equipe/investidores
 - ⚠️ Sem vesting → ALTO RISCO de dump inicial
 - ✅ Vesting configurado adequadamente
@@ -95,20 +109,24 @@ NEO::simulate <TOKEN_NAME>
 ### D. Narrativa
 
 #### 1. Integra com NΞØ Protocol?
+
 - ✅ Menciona NΞØ Protocol na narrativa
 - ✅ Alinhado com valores NΞØ
 - ⚠️ Considerar integração explícita
 
 #### 2. Integra com NΞØ Token?
+
 - ✅ Menciona NEO Token se relevante
 - ⚠️ Opcional mas recomendado
 
 #### 3. Alinhado com FlowOFF Narrativa Cultural?
+
 - ✅ Menciona elementos culturais
 - ✅ Inclui rituais e valores
 - ✅ Engenharia cultural presente
 
 #### 4. Manifesto do Token Existe?
+
 - 🔒 **OBRIGATÓRIO** antes do deploy
 - ✅ Manifesto substancial (>200 caracteres)
 - ⚠️ Manifesto muito curto → expandir
@@ -116,11 +134,13 @@ NEO::simulate <TOKEN_NAME>
 ### E. Simulação de 7 Dias
 
 #### Projeções Geradas:
+
 - **Day 1**: Holders estimados, volume, risco
 - **Day 3**: Crescimento, estabilização
 - **Day 7**: Projeção final, curva de adoção
 
-#### Métricas Calculadas:
+#### Métricas Calculadas
+
 - Holders projetados
 - Volume em ETH e USD
 - Score de risco (0-100)
@@ -129,7 +149,8 @@ NEO::simulate <TOKEN_NAME>
 - Curva de adoção (tipo e pico)
 - Análise de comportamento
 
-#### Fatores Considerados:
+#### Fatores Considerados
+
 - Mint 1x por wallet → distribuição mais equitativa
 - Vesting → reduz risco de dump
 - Preço fixo → impacto na adoção
@@ -147,6 +168,7 @@ O simulador retorna um **veredito final**:
 ### Score Geral (0-100)
 
 Calculado com base em:
+
 - Segurança (30%)
 - Tokenômica (30%)
 - Vesting adequado (20%)
@@ -156,6 +178,7 @@ Calculado com base em:
 ### Deployment Ready
 
 Token está pronto para deploy se:
+
 - ✅ Score ≥ 75
 - ✅ Sem problemas críticos
 - ✅ Veredito = APPROVED
