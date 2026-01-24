@@ -8,10 +8,12 @@ const BuildLog = require('./scripts/build-log');
 const MarketingEngine = require('./scripts/marketing-engine');
 const EcosystemSimulator = require('./scripts/ecosystem-simulator');
 const DoctorEngine = require('./scripts/doctor-engine');
+const TokenDeployer = require('./scripts/token-deployer');
 
 class NeoInternalOps {
   constructor() {
     this.tokenSimulator = new TokenSimulator();
+    this.tokenDeployer = new TokenDeployer();
     this.buildLog = new BuildLog();
     this.marketingEngine = new MarketingEngine();
     this.ecosystemSimulator = new EcosystemSimulator();
@@ -21,7 +23,7 @@ class NeoInternalOps {
   /**
    * Processa um comando
    */
-  processCommand(command) {
+  async processCommand(command) {
     const parts = command.trim().split(/\s+/);
     const prefix = parts[0].toUpperCase();
 
@@ -43,7 +45,7 @@ class NeoInternalOps {
     try {
       switch (module) {
         case 'token':
-          return this.handleTokenCommand(action, args);
+          return await this.handleTokenCommand(action, args);
         case 'status':
         case 'progress':
         case 'version':
@@ -78,7 +80,7 @@ class NeoInternalOps {
   /**
    * Processa comandos do módulo Token
    */
-  handleTokenCommand(action, args) {
+  async handleTokenCommand(action, args) {
     if (!args.length) {
       return { error: 'Nome do token necessário' };
     }
@@ -97,7 +99,7 @@ class NeoInternalOps {
         return this.tokenSimulator.deployPreview(tokenName);
       case 'audit':
         return this.tokenSimulator.quickAudit(tokenName);
-      case 'economics':
+      case 'economics': {
         const token = this.tokenSimulator.loadToken(tokenName);
         if (!token) {
           return { error: `Token ${tokenName} não encontrado` };
@@ -107,6 +109,7 @@ class NeoInternalOps {
           economics: this.tokenSimulator.validateEconomics(token),
           analysis: this.tokenSimulator.analyzeToken(token)
         };
+      }
       case 'narrative':
         return this.tokenSimulator.generateManifest(tokenName);
       case 'rituals':
@@ -114,6 +117,35 @@ class NeoInternalOps {
           token: tokenName,
           suggestions: this.generateRitualSuggestions(tokenName)
         };
+      case 'forge': {
+        // Ação de deploy real (Phase 2)
+        const token = this.tokenSimulator.loadToken(tokenName);
+        if (!token) {
+          return { error: `Token ${tokenName} não encontrado. Crie um rascunho primeiro com NEO::token draft` };
+        }
+
+        // Simular antes de forjar para garantir segurança
+        const simulation = this.tokenSimulator.simulate(tokenName);
+        if (simulation.risks && simulation.risks.some(r => r.level === 'high')) {
+          return {
+            error: "Riscos críticos identificados. Deploy bloqueado.",
+            risks: simulation.risks.filter(r => r.level === 'high')
+          };
+        }
+
+        return await this.tokenDeployer.deploy({
+          tokenConfig: {
+            tokenName: token.name,
+            tokenSymbol: token.symbol,
+            tokenSupply: token.tokenomics.total_supply?.toString() || "1000000",
+            network: token.deployment?.network?.toLowerCase() || 'polygon',
+            description: token.narrative?.story || '',
+            missionNarrative: token.narrative?.manifesto?.vision || ''
+          },
+          userAddress: config.userAddress || '0x0000000000000000000000000000000000000001', // Mock se não fornecido
+          sessionId: config.sessionId || `session_${Date.now()}`
+        });
+      }
       default:
         return { error: `Ação '${action}' não reconhecida` };
     }
@@ -249,8 +281,11 @@ if (typeof window === 'undefined') {
   if (require.main === module) {
     const command = process.argv.slice(2).join(' ');
     if (command) {
-      const result = ops.processCommand(command);
-      console.log(JSON.stringify(result, null, 2));
+      ops.processCommand(command).then(result => {
+        console.log(JSON.stringify(result, null, 2));
+      }).catch(err => {
+        console.error(err);
+      });
     } else {
       console.log('NΞØ Internal Ops App v0.1');
       console.log('Use: node index.js "NEO::status"');

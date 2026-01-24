@@ -174,6 +174,24 @@ NEO::token narrative NEOFLOW
 
 ---
 
+### `NEO::token forge <TOKEN_NAME> [config]`
+
+**Ação de Deploy Real (Phase 2).**
+
+Executa o deploy real do token na rede blockchain configurada.
+1. Carrega o rascunho do token.
+2. Executa simulação de segurança.
+3. Se aprovado, executa transação real via `smart-core`.
+4. Retorna `txHash` e `contractAddress`.
+
+**Exemplo:**
+```
+NEO::token forge WOD
+NEO::token forge WOD {"userAddress": "0x...", "sessionId": "..."}
+```
+
+---
+
 ### `NEO::token rituals <TOKEN_NAME>`
 
 Sugere rituais para o token baseado em sua configuração.

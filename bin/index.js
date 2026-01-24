@@ -43,16 +43,16 @@ program
 program
   .command('simulate <token>')
   .description('Simular ecossistema do token')
-  .action((token) => {
-    const result = ops.processCommand(`NEO::simulate ${token}`);
+  .action(async (token) => {
+    const result = await ops.processCommand(`NEO::simulate ${token}`);
     console.log(JSON.stringify(result, null, 2));
   });
 
 program
   .command('status')
   .description('Verificar status do desenvolvimento')
-  .action(() => {
-    const result = ops.processCommand(`NEO::status`);
+  .action(async () => {
+    const result = await ops.processCommand(`NEO::status`);
     console.log(JSON.stringify(result, null, 2));
   });
 
@@ -60,17 +60,17 @@ program
   .command('marketing <action>')
   .description('Gerar updates de marketing (headline, story, post)')
   .argument('[args...]', 'Argumentos adicionais')
-  .action((action, args) => {
-    const result = ops.processCommand(`NEO::marketing ${action} ${args.join(' ')}`);
+  .action(async (action, args) => {
+    const result = await ops.processCommand(`NEO::marketing ${action} ${args.join(' ')}`);
     console.log(JSON.stringify(result, null, 2));
   });
 
 program
   .command('token <action> <name>')
-  .description('Operações de token (draft, manifest, audit, economics)')
+  .description('Operações de token (draft, manifest, audit, economics, forge)')
   .argument('[config]', 'Configuração JSON opcional')
-  .action((action, name, config) => {
-    const result = ops.processCommand(`NEO::token ${action} ${name} ${config || ''}`);
+  .action(async (action, name, config) => {
+    const result = await ops.processCommand(`NEO::token ${action} ${name} ${config || ''}`);
     console.log(JSON.stringify(result, null, 2));
   });
 

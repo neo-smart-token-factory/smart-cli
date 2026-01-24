@@ -64,7 +64,15 @@
         "last_updated": "2026-01-20T12:40:41.739Z"
       }
     ],
-    "deployed": []
+    "deployed": [
+      {
+        "name": "FORGE_TEST",
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "network": "hardhat",
+        "txHash": "0xeb7fdc2016014",
+        "deployed_at": "2026-01-24T08:40:15.701Z"
+      }
+    ]
   },
   "marketing": {
     "last_update": "2024-01-01T00:00:00Z",
