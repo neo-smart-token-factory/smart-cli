@@ -174,7 +174,7 @@ NEO::token narrative NEOFLOW
 
 ---
 
-### `NEO::token forge <TOKEN_NAME> [config]`
+### `NEO::token deploy <TOKEN_NAME> [config]`
 
 **Ação de Deploy Real (Phase 2).**
 
@@ -186,9 +186,11 @@ Executa o deploy real do token na rede blockchain configurada.
 
 **Exemplo:**
 ```
-NEO::token forge WOD
-NEO::token forge WOD {"userAddress": "0x...", "sessionId": "..."}
+NEO::token deploy WOD
+NEO::token deploy WOD {"userAddress": "0x...", "sessionId": "..."}
 ```
+
+**Nota:** O comando `forge` ainda é suportado para compatibilidade retroativa, mas está deprecated. Use `deploy` ao invés.
 
 ---
 
@@ -209,7 +211,7 @@ NEO::token rituals WOD
 
 Retorna status completo do projeto:
 - Versão atual
-- Progresso da FORGE
+- Progresso da SMART FACTORY
 - Itens concluídos
 - Pendências
 - Recomendações
@@ -227,7 +229,7 @@ NEO::status
 ```
 v0.5.1 — IGNIÇÃO
 
-FORGE:
+SMART:
 - ✅ Core (completed)
 - ✅ Templates (completed)
 - ✅ Environment (completed)

@@ -1,5 +1,5 @@
 {
-  "name": "@neo-smart/cli",
+  "name": "@neo-smart-token-factory/nsf",
   "version": "0.5.3",
   "description": "NΞØ SMART FACTORY — Unified CLI Tool",
   "main": "ops-handler.js",

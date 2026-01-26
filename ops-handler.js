@@ -117,14 +117,15 @@ class NeoInternalOps {
           token: tokenName,
           suggestions: this.generateRitualSuggestions(tokenName)
         };
-      case 'forge': {
+      case 'deploy':
+      case 'forge': { // Mantido para compatibilidade retroativa (deprecated)
         // Ação de deploy real (Phase 2)
         const token = this.tokenSimulator.loadToken(tokenName);
         if (!token) {
           return { error: `Token ${tokenName} não encontrado. Crie um rascunho primeiro com NEO::token draft` };
         }
 
-        // Simular antes de forjar para garantir segurança
+        // Simular antes de deploy para garantir segurança
         const simulation = this.tokenSimulator.simulate(tokenName);
         if (simulation.risks && simulation.risks.some(r => r.level === 'high')) {
           return {
