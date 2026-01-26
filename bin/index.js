@@ -15,7 +15,7 @@ const ops = new NeoInternalOps();
 
 program
   .name('nsf')
-  .alias('neo-smart-factory')
+  .alias('nxf')
   .description('NΞØ SMART FACTORY Unified CLI')
   .version('0.5.3');
 

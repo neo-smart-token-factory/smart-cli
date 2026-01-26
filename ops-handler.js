@@ -117,8 +117,7 @@ class NeoInternalOps {
           token: tokenName,
           suggestions: this.generateRitualSuggestions(tokenName)
         };
-      case 'deploy':
-      case 'forge': { // Mantido para compatibilidade retroativa (deprecated)
+      case 'deploy': {
         // Ação de deploy real (Phase 2)
         const token = this.tokenSimulator.loadToken(tokenName);
         if (!token) {

@@ -190,8 +190,6 @@ NEO::token deploy WOD
 NEO::token deploy WOD {"userAddress": "0x...", "sessionId": "..."}
 ```
 
-**Nota:** O comando `forge` ainda é suportado para compatibilidade retroativa, mas está deprecated. Use `deploy` ao invés.
-
 ---
 
 ### `NEO::token rituals <TOKEN_NAME>`
