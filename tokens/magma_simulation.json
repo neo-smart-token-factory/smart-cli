@@ -1,0 +1,179 @@
+{
+  "token": "MAGMA",
+  "timestamp": "2026-01-24T09:08:43.166Z",
+  "status": "simulating",
+  "security": {
+    "supply_valid": {
+      "valid": true,
+      "supply": 1000000000
+    },
+    "owner_valid": {
+      "valid": true,
+      "owner": "0x470a8c640fFC2C16aEB6bE803a948420e2aE8456"
+    },
+    "price_valid": {
+      "valid": true,
+      "warning": "Preço não configurado (pode ser intencional para token gratuito)",
+      "critical": false
+    },
+    "locks_adequate": {
+      "valid": true,
+      "locks": {
+        "mintable": false,
+        "burnable": true,
+        "pausable": true,
+        "governance": false
+      },
+      "warning": ""
+    },
+    "wallet_connected": {
+      "valid": true,
+      "note": "Verificar conexão real da wallet antes do deploy"
+    },
+    "overall_score": 100,
+    "passed": true,
+    "warnings": [],
+    "errors": []
+  },
+  "tokenomics": {
+    "model_makes_sense": {
+      "valid": true
+    },
+    "infinite_mint_risk": {
+      "risk": false
+    },
+    "exploit_risk": {
+      "risk": false
+    },
+    "overflow_risk": {
+      "risk": false
+    },
+    "distribution_valid": {
+      "valid": true,
+      "total_distributed": 900000000,
+      "percentages": {
+        "team": "20.00",
+        "investors": "10.00",
+        "community": "20.00",
+        "treasury": "10.00",
+        "liquidity": "30.00"
+      },
+      "undistributed": 100000000,
+      "undistributed_percent": "10.00"
+    },
+    "overall_score": 100,
+    "passed": true,
+    "warnings": [],
+    "errors": []
+  },
+  "rituals": {
+    "mint_once_per_wallet": {
+      "makes_sense": true,
+      "analysis": "Sem restrição de mint por wallet"
+    },
+    "initial_supply_impact": {
+      "risk": "low",
+      "analysis": "Supply inicial parece adequado",
+      "impact": "Baixo risco de impacto negativo na economia"
+    },
+    "fixed_price_barrier": {
+      "creates_barrier": false,
+      "analysis": "Preço fixo zero (gratuito) não cria barreira",
+      "recommendation": "Considerar se token gratuito é intencional"
+    },
+    "vesting_necessity": {
+      "necessary": true,
+      "hasVesting": true,
+      "analysis": "Vesting configurado adequadamente",
+      "risk": "Baixo"
+    },
+    "overall_assessment": "",
+    "recommendations": []
+  },
+  "narrative": {
+    "neo_protocol_integration": {
+      "integrated": true,
+      "analysis": "Narrativa integra com NΞØ Protocol",
+      "recommendation": null
+    },
+    "neo_token_integration": {
+      "integrated": false,
+      "analysis": "Não menciona NEO Token explicitamente",
+      "recommendation": "Opcional: conectar com NEO Token se relevante"
+    },
+    "flowoff_narrative": {
+      "integrated": false,
+      "analysis": "Narrativa não menciona elementos FlowOFF",
+      "recommendation": "Considerar integrar elementos culturais e rituais da FlowOFF"
+    },
+    "token_manifesto": {
+      "exists": true,
+      "substantial": true,
+      "analysis": "Manifesto existe e é substancial (567 caracteres)",
+      "recommendation": null
+    },
+    "overall_coherence": "",
+    "score": 0
+  },
+  "sevenDaySimulation": {
+    "day1": {
+      "day": 1,
+      "estimated_holders": 50000000,
+      "estimated_volume_eth": "5000.0000",
+      "estimated_volume_usd": "10000000.00",
+      "risk_score": 80,
+      "risk_level": "low",
+      "adoption_rate": "5.00%"
+    },
+    "day3": {
+      "day": 3,
+      "estimated_holders": 42320000,
+      "estimated_volume_eth": "4232.0000",
+      "estimated_volume_usd": "8464000.00",
+      "risk_score": 80,
+      "risk_level": "low",
+      "adoption_rate": "4.23%"
+    },
+    "day7": {
+      "day": 7,
+      "estimated_holders": 30317750,
+      "estimated_volume_eth": "3031.7750",
+      "estimated_volume_usd": "6063550.00",
+      "risk_score": 85,
+      "risk_level": "low",
+      "adoption_rate": "3.03%"
+    },
+    "summary": {
+      "projected_holders": 30317750,
+      "projected_volume_7d_eth": "21222.4250",
+      "projected_volume_7d_usd": "42444850.00",
+      "average_risk_score": 85,
+      "risk_level": "low",
+      "adoption_trend": "growing",
+      "recommendation": "Token pronto para deploy. Risco baixo."
+    },
+    "adoption_curve": {
+      "type": "exponential_decay",
+      "peak_day": 1,
+      "stabilization_day": 7,
+      "analysis": "Crescimento inicial rápido com decaimento exponencial"
+    },
+    "behavior_analysis": [
+      {
+        "pattern": "Vesting configurado",
+        "impact": "Reduz risco de dump inicial",
+        "risk": "low"
+      }
+    ]
+  },
+  "verdict": {
+    "can_deploy": true,
+    "overall_score": 92,
+    "status": "APPROVED",
+    "critical_issues": [],
+    "deployment_ready": true
+  },
+  "criticalRecommendations": [
+    "✅ Token parece pronto para deploy"
+  ]
+}
