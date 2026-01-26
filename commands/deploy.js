@@ -19,7 +19,7 @@ module.exports = async function deploy(options) {
   try {
     // Executar deploy via Hardhat
     execSync(
-      `cd ../forge-core && npx hardhat run scripts/deploy.js --network ${network}`,
+      `cd ../smart-core && npx hardhat run scripts/deploy.js --network ${network}`,
       { stdio: 'inherit' }
     );
   } catch (error) {

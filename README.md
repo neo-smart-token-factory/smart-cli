@@ -1,6 +1,6 @@
 # NΞØ SMART FACTORY CLI (nxf)
 
-> **Official Forge & Operations Engine for the NΞØ Protocol.**
+> **Official Operations Engine for the NΞØ Protocol.**
 
 A interface unificada para desenvolvedores e operadores da **NΞØ SMART FACTORY**. Projetada como o "cérebro operacional" do ecossistema, permitindo simulação, auditoria, deploy e gestão narrativa de protocolos Web3 diretamente pelo terminal.
 
@@ -32,7 +32,7 @@ Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
 │    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
 │ └─ nxf simulate                                                             │
 │    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
-│ └─ nxf token forge                                                          │
+│ └─ nxf token deploy                                                        │
 │    └─ Deploy Real (Phase 2 Bridge) via smart-core (Production)              │
 │ └─ nxf doctor                                                               │
 │    └─ Diagnóstico de saúde e auditoria do protocolo (Phase 1)               │
@@ -45,11 +45,11 @@ Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
 
 ## 🔵 Phase 2 Integration (Web3 Bridge)
 
-A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nxf token forge` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
+A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nxf token deploy` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
 
 ```bash
 # Executar deploy real com validação de segurança automática
-nxf token forge NOME_DO_TOKEN
+nxf token deploy NOME_DO_TOKEN
 ```
 
 ## 🛠️ Tech Stack & Standards

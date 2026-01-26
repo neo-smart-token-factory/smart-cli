@@ -2,7 +2,7 @@
   "version": "0.5.3",
   "codename": "MULTICHAIN FOUNDATION",
   "status": "development",
-  "forge": {
+  "smart": {
     "core": {
       "status": "completed",
       "version": "0.5.1",
@@ -72,7 +72,7 @@
     ],
     "deployed": [
       {
-        "name": "FORGE_TEST",
+        "name": "SMART_TEST",
         "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
         "network": "hardhat",
         "txHash": "0xeb7fdc2016014",

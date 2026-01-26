@@ -67,7 +67,7 @@ program
 
 program
   .command('token <action> <name>')
-  .description('Operações de token (draft, manifest, audit, economics, forge)')
+  .description('Operações de token (draft, manifest, audit, economics, deploy)')
   .argument('[config]', 'Configuração JSON opcional')
   .action(async (action, name, config) => {
     const result = await ops.processCommand(`NEO::token ${action} ${name} ${config || ''}`);

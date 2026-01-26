@@ -1,6 +1,6 @@
 /**
  * NEO Build Log
- * Acompanha progresso da construção da FORGE
+ * Acompanha progresso da construção da SMART FACTORY
  */
 
 const fs = require('fs');
@@ -20,7 +20,7 @@ class BuildLog {
     return {
       version: `${state.version} — ${state.codename}`,
       status: state.status,
-      forge: this.getForgeStatus(state),
+      smart: this.getSmartStatus(state),
       tokens: this.getTokensStatus(state),
       progress: this.calculateProgress(state),
       completed: this.getCompletedItems(state),
@@ -58,7 +58,7 @@ class BuildLog {
       version: state.version,
       codename: state.codename,
       status: state.status,
-      released_at: state.forge.core.completed_at
+      released_at: state.smart.core.completed_at
     };
   }
 
@@ -92,23 +92,23 @@ class BuildLog {
     return JSON.parse(fs.readFileSync(this.statePath, 'utf8'));
   }
 
-  getForgeStatus(state) {
-    const forge = state.forge || {};
-    const components = Object.keys(forge);
+  getSmartStatus(state) {
+    const smart = state.smart || {};
+    const components = Object.keys(smart);
     
     const status = {
-      completed: components.filter(c => forge[c].status === 'completed').length,
-      in_progress: components.filter(c => forge[c].status === 'in_progress').length,
-      pending: components.filter(c => forge[c].status === 'pending').length,
+      completed: components.filter(c => smart[c].status === 'completed').length,
+      in_progress: components.filter(c => smart[c].status === 'in_progress').length,
+      pending: components.filter(c => smart[c].status === 'pending').length,
       total: components.length,
       breakdown: {}
     };
 
     components.forEach(component => {
       status.breakdown[component] = {
-        status: forge[component].status,
-        version: forge[component].version,
-        notes: forge[component].notes
+        status: smart[component].status,
+        version: smart[component].version,
+        notes: smart[component].notes
       };
     });
 
@@ -128,13 +128,13 @@ class BuildLog {
   }
 
   calculateProgress(state) {
-    const forge = state.forge || {};
-    const components = Object.keys(forge);
+    const smart = state.smart || {};
+    const components = Object.keys(smart);
     
     if (components.length === 0) return 0;
 
-    const completed = components.filter(c => forge[c].status === 'completed').length;
-    const inProgress = components.filter(c => forge[c].status === 'in_progress').length;
+    const completed = components.filter(c => smart[c].status === 'completed').length;
+    const inProgress = components.filter(c => smart[c].status === 'in_progress').length;
     
     // Completed = 100%, In Progress = 50%, Pending = 0%
     const progress = ((completed * 100) + (inProgress * 50)) / components.length;
@@ -143,11 +143,11 @@ class BuildLog {
   }
 
   getProgressBreakdown(state) {
-    const forge = state.forge || {};
+    const smart = state.smart || {};
     const breakdown = {};
     
-    Object.keys(forge).forEach(component => {
-      const comp = forge[component];
+    Object.keys(smart).forEach(component => {
+      const comp = smart[component];
       let progress = 0;
       
       if (comp.status === 'completed') progress = 100;
@@ -165,16 +165,16 @@ class BuildLog {
   }
 
   getCompletedItems(state) {
-    const forge = state.forge || {};
+    const smart = state.smart || {};
     const completed = [];
     
-    Object.keys(forge).forEach(component => {
-      if (forge[component].status === 'completed') {
+    Object.keys(smart).forEach(component => {
+      if (smart[component].status === 'completed') {
         completed.push({
           component,
-          version: forge[component].version,
-          completed_at: forge[component].completed_at,
-          notes: forge[component].notes
+          version: smart[component].version,
+          completed_at: smart[component].completed_at,
+          notes: smart[component].notes
         });
       }
     });
@@ -183,14 +183,14 @@ class BuildLog {
   }
 
   getPendingItems(state) {
-    const forge = state.forge || {};
+    const smart = state.smart || {};
     const pending = [];
     
-    Object.keys(forge).forEach(component => {
-      if (forge[component].status === 'pending') {
+    Object.keys(smart).forEach(component => {
+      if (smart[component].status === 'pending') {
         pending.push({
           component,
-          notes: forge[component].notes
+          notes: smart[component].notes
         });
       }
     });
@@ -236,11 +236,11 @@ class BuildLog {
   }
 
   getTimeline(state) {
-    const forge = state.forge || {};
+    const smart = state.smart || {};
     const timeline = [];
     
-    Object.keys(forge).forEach(component => {
-      const comp = forge[component];
+    Object.keys(smart).forEach(component => {
+      const comp = smart[component];
       if (comp.completed_at) {
         timeline.push({
           component,
