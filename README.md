@@ -1,4 +1,4 @@
-# NΞØ SMART FACTORY CLI (nxf)
+# NΞØ SMART FACTORY CLI (nsf)
 
 > **Official Operations Engine for the NΞØ Protocol.**
 
@@ -6,7 +6,7 @@ A interface unificada para desenvolvedores e operadores da **NΞØ SMART FACTORY
 
 ## 🚀 Instalação (Development Mode)
 
-Para contribuir com o projeto localmente e ativar o comando `nxf` globalmente:
+Para contribuir com o projeto localmente e ativar o comando `nsf` globalmente:
 
 ```bash
 # 1. Clone o repositório
@@ -20,36 +20,48 @@ npm install
 npm link
 ```
 
-Agora você pode usar `nxf` ou `neo-smart-factory` de qualquer lugar!
+Agora você pode usar `nsf` ou `neo-smart-factory` de qualquer lugar!
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ ▓▓▓ COMANDOS PRINCIPAIS (v0.5.3)                                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ └─ nxf init                                                                 │
+│ └─ nsf init                                                                 │
 │    └─ Inicializa um novo ambiente de token (Phase 1)                        │
-│ └─ nxf token draft                                                          │
+│ └─ nsf token draft                                                          │
 │    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
-│ └─ nxf simulate                                                             │
+│ └─ nsf simulate                                                             │
 │    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
+<<<<<<< HEAD
 │ └─ nxf token deploy                                                        │
+=======
+│ └─ nsf token forge                                                          │
+>>>>>>> main
 │    └─ Deploy Real (Phase 2 Bridge) via smart-core (Production)              │
-│ └─ nxf doctor                                                               │
+│ └─ nsf doctor                                                               │
 │    └─ Diagnóstico de saúde e auditoria do protocolo (Phase 1)               │
-│ └─ nxf marketing                                                            │
+│ └─ nsf marketing                                                            │
 │    └─ Motor de narrativa e geração de conteúdo (Phase 1)                    │
-│ └─ nxf status                                                               │
+│ └─ nsf status                                                               │
 │    └─ Verifica o progresso e estado da factory (Phase 1)                    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ## 🔵 Phase 2 Integration (Web3 Bridge)
 
+<<<<<<< HEAD
 A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nxf token deploy` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
 
 ```bash
 # Executar deploy real com validação de segurança automática
 nxf token deploy NOME_DO_TOKEN
+=======
+A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nsf token forge` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
+
+```bash
+# Executar deploy real com validação de segurança automática
+nsf token forge NOME_DO_TOKEN
+>>>>>>> main
 ```
 
 ## 🛠️ Tech Stack & Standards

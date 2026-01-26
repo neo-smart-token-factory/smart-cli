@@ -4,21 +4,21 @@ Este guia detalha como utilizar a ferramenta oficial de linha de comando (CLI) d
 
 ## 💻 1. Uso via Terminal (Desenvolvedores)
 
-Se você executou o `npm link`, use o comando `nxf`:
+Se você executou o `npm link`, use o comando `nsf`:
 
 ### Iniciar Projeto
 ```bash
-nxf init
+nsf init
 ```
 
 ### Diagnóstico de Protocolo
 ```bash
-nxf doctor --deep --contract <address>
+nsf doctor --deep --contract <address>
 ```
 
 ### Simular Ecossistema
 ```bash
-nxf simulate <TOKEN_SYMBOL>
+nsf simulate <TOKEN_SYMBOL>
 ```
 
 ---
@@ -45,7 +45,7 @@ Para desenvolvedores modificando a fábrica:
 ## 📋 Lista Completa
 Para ver todos os comandos e opções atualizadas, sempre consulte:
 ```bash
-nxf --help
+nsf --help
 ```
 
 OU leia o arquivo completo de especificações em **[COMMANDS.md](./COMMANDS.md)**.
