@@ -20,7 +20,7 @@ As of **January 24, 2026**, the official nomenclature for this project ecosystem
 - **SMART** (official product nomenclature)
 - **NeoToken** / **SmartToken** (token naming convention)
 - **NeoSmartFactory** / **NeoJettonFactory** (factory naming convention)
-- **nxf** (official CLI shorthand)
+
 
 ### ❌ DEPRECATED TERMINOLOGY
 The following terms are **officially deprecated** and must not be used in new code or documentation:
