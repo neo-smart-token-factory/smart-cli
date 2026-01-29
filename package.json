@@ -5,7 +5,6 @@
   "main": "ops-handler.js",
   "bin": {
     "nsf": "./bin/index.js",
-    "nxf": "./bin/index.js",
     "neo-smart-factory": "./bin/index.js"
   },
   "scripts": {
