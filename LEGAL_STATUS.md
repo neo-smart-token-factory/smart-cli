@@ -22,20 +22,7 @@ As of **January 24, 2026**, the official nomenclature for this project ecosystem
 - **NeoSmartFactory** / **NeoJettonFactory** (factory naming convention)
 
 
-### ❌ DEPRECATED TERMINOLOGY
-The following terms are **officially deprecated** and must not be used in new code or documentation:
-- ~~FORGE~~
-- ~~Neural Forge~~
-- ~~Forge Factory~~
-- ~~forge-core~~
-- ~~forge-ui~~
-- ~~forge-cli~~
-- ~~ForgeToken~~
-- ~~ForgeFactory~~
 
-> **Historical Note:** References to deprecated terminology may exist in archived documentation (CHANGELOG, commit history) for historical accuracy. These should not be altered unless required for core functionality.
-
----
 
 ## License Structure
 
