@@ -32,7 +32,7 @@ Agora você pode usar `nsf` ou `neo-smart-factory` de qualquer lugar!
 │    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
 │ └─ nsf simulate                                                             │
 │    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
-│ └─ nsf token forge                                                          │
+│ └─ nsf token deploy                                                         │
 │    └─ Deploy Real (Phase 2 Bridge) via smart-core (Production)              │
 │ └─ nsf doctor                                                               │
 │    └─ Diagnóstico de saúde e auditoria do protocolo (Phase 1)               │
@@ -45,11 +45,11 @@ Agora você pode usar `nsf` ou `neo-smart-factory` de qualquer lugar!
 
 ## 🔵 Phase 2 Integration (Web3 Bridge)
 
-A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nsf token forge` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
+A partir da v0.5.3, a CLI atua como a **Protocol Authority** para o `smart-ui`. O comando `nsf token deploy` permite que a interface modular envie intenções de deploy que são processadas com simulação de segurança prévia.
 
 ```bash
 # Executar deploy real com validação de segurança automática
-nsf token forge NOME_DO_TOKEN
+nsf token deploy NOME_DO_TOKEN
 ```
 
 ## 🛠️ Tech Stack & Standards
