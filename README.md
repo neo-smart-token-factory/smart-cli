@@ -30,6 +30,8 @@ Agora você pode usar `nsf` ou `neo-smart-factory` de qualquer lugar!
 │    └─ Inicializa um novo ambiente de token (Phase 1)                        │
 │ └─ nsf token draft                                                          │
 │    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
+│ └─ nsf token deploy                                                         │
+│    └─ Deploy de token (Phase 2 Bridge) via smart-core (Production)          │
 │ └─ nsf simulate                                                             │
 │    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
 │ └─ nsf token forge                                                          │
