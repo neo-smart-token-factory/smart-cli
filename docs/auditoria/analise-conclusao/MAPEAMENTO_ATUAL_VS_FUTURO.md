@@ -6,15 +6,18 @@
 
 ## 📊 Tabela de Mapeamento
 
-| Aspecto | Estrutura Atual (v0.5.1) | Proposta Futura (Multi-Repo) |
-|---------|--------------------------|------------------------------|
-| **Tipo** | Monorepo | Multi-repo (8 repositórios) |
-| **GitHub** | `neo-smart-factory` (repo único) | `neo-smart-token-factory/*` (org com 8 repos) |
-| **Pastas** | `forge-core/`, `forge-ui/`, `forge-cli/` | `smart-core/`, `smart-ui/`, `smart-cli/` |
-| **CLI** | `neo-smart-factory` | `nxf` (com `neo-smart-factory` como alias) |
-| **NPM Scope** | `neo-smart-factory-*` | `@neosmart/*` |
-| **Pacotes** | `neo-smart-factory-core`<br>`neo-smart-factory-ui`<br>`neo-smart-factory-cli` | `@neosmart/core`<br>`@neosmart/ui`<br>`nxf` ou `@neosmart/cli` |
-| **Status** | ✅ Implementado | 🔜 Planejado |
+```text
+ASPECTO       ATUAL (v0.5.1)            FUTURO (PROPOSTA)
+-------       ----------------------    -----------------------
+Tipo          Monorepo                  Multi-repo (8 repos)
+GitHub        neo-smart-factory         neo-smart-token-factory
+Pastas        forge-{core,ui,cli}/      smart-{core,ui,cli}/
+CLI           neo-smart-factory         nxf (alias)
+NPM           neo-smart-factory-*       @neosmart/*
+Pacotes       core, ui, cli             @neosmart/core, ui, cli
+Status        [v]                       [>] 
+-------       ----------------------    -----------------------
+```
 
 ---
 
@@ -22,39 +25,54 @@
 
 ### Core Layer
 
-| Atual | Futuro | Status |
-|-------|--------|--------|
-| `forge-core/` | `smart-core/` | ✅ Migração planejada |
-| `forge-core/contracts/` | `smart-core/contracts/` | ✅ Mesma estrutura |
-| `forge-core/scripts/` | `smart-core/scripts/` | ✅ Mesma estrutura |
+```text
+ATUAL                      FUTURO                 STATUS
+-----------------------    -------------------    ------------------
+forge-core/                smart-core/            [v] PLANEJADO
+forge-core/contracts/      smart-core/contracts/  [v] MANTIDO
+forge-core/scripts/        smart-core/scripts/    [v] MANTIDO
+-----------------------    -------------------    ------------------
+```
 
 ### Interface Layer
 
-| Atual | Futuro | Status |
-|-------|--------|--------|
-| `forge-ui/` | `smart-ui/` | ✅ Migração planejada |
-| `forge-ui/landing/` | `smart-ui/landing/` | ✅ Mesma estrutura |
-| `forge-ui/nuxt-app/` | `smart-ui/nuxt-app/` | ✅ Mesma estrutura |
-| `forge-cli/` | `smart-cli/` | ✅ Migração planejada |
+```text
+ATUAL                      FUTURO                 STATUS
+-----------------------    -------------------    ------------------
+forge-ui/                  smart-ui/              [v] PLANEJADO
+forge-ui/landing/          smart-ui/landing/      [v] MANTIDO
+forge-ui/nuxt-app/         smart-ui/nuxt-app/     [v] MANTIDO
+forge-cli/                 smart-cli/             [v] PLANEJADO
+-----------------------    -------------------    ------------------
+```
 
 ### Intelligence Layer (Futuro)
 
-| Atual | Futuro | Status |
-|-------|--------|--------|
-| `internal-ops/scripts/ecosystem-simulator.js` | `smart-oracle/` | 🔨 A ser criado |
-| `internal-ops/scripts/marketing-engine.js` | `smart-cult/` | 🔨 A ser criado |
+```text
+ATUAL                           FUTURO                 STATUS
+----------------------------    -------------------    ------------------
+scripts/ecosystem-simulator.js  smart-oracle/          [>] CRIAR
+scripts/marketing-engine.js     smart-cult/            [>] CRIAR
+----------------------------    -------------------    ------------------
+```
 
 ### Data Layer (Futuro)
 
-| Atual | Futuro | Status |
-|-------|--------|--------|
-| `internal-ops/tokens/template.json` | `smart-dna/` | 🔨 A ser criado |
+```text
+ATUAL                           FUTURO                 STATUS
+----------------------------    -------------------    ------------------
+tokens/template.json            smart-dna/             [>] CRIAR
+----------------------------    -------------------    ------------------
+```
 
 ### Orchestration Layer (Futuro)
 
-| Atual | Futuro | Status |
-|-------|--------|--------|
-| N/A (comandos separados) | `smart-kernel/` | 🔜 Planejado |
+```text
+ATUAL                           FUTURO                 STATUS
+----------------------------    -------------------    ------------------
+N/A (comandos separados)        smart-kernel/          [>] PLANEJADO
+----------------------------    -------------------    ------------------
+```
 
 ---
 
@@ -112,7 +130,7 @@ neo-smart-factory deploy  # Alias
 ### Atual (v0.5.1)
 
 ```
-github.com/kauntdewn1/neo_smart_factory
+github.com/neomello/neo_smart_factory
 └── (monorepo)
     ├── forge-core/
     ├── forge-ui/

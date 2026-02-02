@@ -13,69 +13,62 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 | Versão | Nome | Tema | Entrega Estimada | Status |
 |--------|------|------|-----------------|--------|
-| **v0.6.0** | **ORÁCULO** | Inteligência e refinamento | **Fev 2025** | 🔨 Em planejamento |
-| **v0.7.0** | **CULT** | Narrativa e documentos | **Mar 2025** | 📋 Planejado |
-| **v0.8.0** | **KERNEL** | Automação total | **Abr 2025** | 📋 Planejado |
-| **v1.0.0** | **IGNIÇÃO COMPLETA** | Sistema coeso | **Q2 2025** | 🎯 Objetivo |
+| **v0.5.x** | **IGNIÇÃO** | Base sólida e segurança | **Jan 2026** | ✅ Concluído |
+| **v0.6.0** | **ORÁCULO** | Inteligência e Diagnóstico | **Fev 2026** | 🔨 Em execução |
+| **v0.7.0** | **CULT** | Narrativa e Identidade | **Mar 2026** | 📋 Planejado |
+| **v0.8.0** | **KERNEL** | Automação e Orquestração | **Abr 2026** | 📋 Planejado |
+| **v1.0.0** | **SINGULARIDADE** | Ecossistema Autônomo | **Q3 2026** | 🎯 Objetivo |
 
 ---
 
-### v0.6.0 — ORÁCULO (Fev 2025)
+### v0.5.x — IGNIÇÃO (Jan 2026)
 
-**Foco**: Inteligência e refinamento
+**Foco**: Base Sólida, Estética Premium e Segurança Neural.
 
-**O que será entregue**:
-- ✅ `forge-oracle/` — Sistema de questionamento inteligente
-  - Integração com LLM (GPT-4/Claude)
-  - Heurísticas de antifragilidade
-  - Árvore de decisão para refinamento
-  - Questionamento interativo pré-deploy
-- ✅ `forge-dna/` completo — Schema avançado
-  - Campos `archetype`, `energy`, `ecosystem`
-  - Configuração de `infrastructure`
-  - Flags `extras` (marketplace, landing, etc.)
-  - Validação completa de DNA
-
-**Por que é importante**:  
-O Oracle eleva a qualidade dos tokens criados, identificando pontos cegos e fortalecendo a arquitetura antes do deploy.
+**Entregas Realizadas**:
+- ✅ **v0.5.1**: Purificação do repositório base e estrutura modular.
+- ✅ **v0.5.3**: **Security Hardening** — Validação EVM, Sanitização XSS e Normalização de dados.
+- ✅ **NΞØ Smart Mint Protocol**: Sistema de sincronização cross-repo antecipado.
+- ✅ **Interface Premium**: Dashboard inicial com suporte a Base/Polygon e Cloud State Sync.
 
 ---
 
-### v0.7.0 — CULT (Mar 2025)
+### v0.6.0 — ORÁCULO (Fev 2026)
 
-**Foco**: Narrativa e documentos
+**Foco**: Inteligência, Diagnóstico e Auditoria Preditiva.
 
 **O que será entregue**:
-- ✅ `forge-cult/` — Geração automática de documentos
-  - Gerador de manifesto
-  - Gerador de whitepaper
-  - Gerador de pitch deck
-  - Templates de narrativa
-- ✅ Expansão do sistema de rituais
-  - Configuração de rituais por token
-  - Templates de rituais de comunidade
+- 🔨 **Ecosystem Doctor**: Expansão do sistema `doctor` para auditoria de contratos inteligentes em tempo real.
+- 🔨 **Protocol Intel Dashboard**: Feed dinâmico integrado entre `smart-ui` e `internal-ops` (v1.0 ativo).
+- 🔨 **Heurísticas de Antifragilidade**: Algoritmos de verificação pré-deploy para evitar exploits comuns.
+- 📋 **Neural Forge Template**: Primeiro template de contrato com lógica de governança inteligente.
 
 **Por que é importante**:  
-Cada token precisa de narrativa forte. O CULT automatiza a criação de documentos essenciais.
+Transforma a fábrica de uma ferramenta passiva em um assistente ativo que garante a qualidade de cada ativo gerado.
 
 ---
 
-### v0.8.0 — KERNEL (Abr 2025)
+### v0.7.0 — CULT (Mar 2026)
 
-**Foco**: Automação total
+**Foco**: Narrativa Automática e Engenharia Cultural.
 
 **O que será entregue**:
-- ✅ Kernel TypeScript — Pipeline automatizado
-  - Script `forge.ts` que orquestra tudo
-  - Integração entre todos os módulos
-  - Deploy one-click completo
-  - Geração automática de UI por token
-- ✅ Separação de `forge-deployer/`
-  - Módulo dedicado de deploy
-  - Pipeline ritualizado
+- 📋 **Manifesto Engine**: Geração de narrativas épicas baseadas no DNA do token.
+- 📋 **Ritualist API**: Calendário de rituais de comunidade gerado via AI.
+- 📋 **Creative Assets Forge**: Geração automática de logotipos e materiais visuais (integrado com DALL-E/Midjourney).
+- 📋 **Whitepaper Dynamic Generator**: Exportação de documentos técnicos estruturados (Markdown/PDF).
 
-**Por que é importante**:  
-O Kernel transforma a experiência de "vários comandos" para "um clique, um ecossistema completo".
+---
+
+### v0.8.0 — KERNEL (Abr 2026)
+
+**Foco**: Automação de Ponta a Ponta e Orquestração Total.
+
+**O que será entregue**:
+- 📋 **Singular CLI**: Um único comando `neo forge` que orquestra build, test, deploy e docs.
+- 📋 **One-Click Ecosystem**: Deploy simultâneo de Contrato + Landing Page + Dashboard de Holder.
+- 📋 **Bridge-Ready Integration**: Conectores nativos para pontes multichain.
+- 📋 **Protocol Auto-Updating**: Contratos actualizáveis via Proxy com governança integrada.
 
 ---
 
@@ -96,6 +89,27 @@ A versão 1.0 representa o cumprimento completo do manifesto: uma fábrica desce
 ---
 
 ## 📋 Histórico de Versões
+
+### [0.5.3] - 2026-01-21 — SECURITY HARDENING
+**Status**: ✅ Estável — Reforço Crítico
+
+#### Adicionado
+- **NΞØ Smart Mint Protocol**: Novo workflow para sincronização cross-repo (UI <-> Core <-> Docs).
+- Sistema de validação de endereços e transações EVM via Regex em endpoints de API.
+- Sanitização de inputs contra XSS em todas as áreas de configuração de token.
+- Feedback visual de erros críticos através de alertas dinâmicos na interface.
+
+#### Mudado
+- **Wallet Connection**: Migração de simulação aleatória para padrão real de requisição `eth_requestAccounts`.
+- **Cloud Sync**: Otimização do debounce de auto-save (de 1s para 2s) para preservação de recursos de banco de dados.
+- Normalização de endereços para lowercase antes do storage para prevenir colisão de dados.
+
+#### Corrigido
+- Vulnerabilidade de injeção em endpoints `api/deploys` e `api/drafts`.
+- Race condition no carregamento de histórico de deploys.
+- Identificadores duplicados e excesso de renders no formulário principal.
+
+---
 
 ### [0.5.1] - 2024-01-01 — IGNIÇÃO
 

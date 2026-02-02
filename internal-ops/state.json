@@ -1,7 +1,7 @@
 {
-  "version": "0.5.1",
-  "codename": "IGNIÇÃO",
-  "status": "development",
+  "version": "0.5.3",
+  "codename": "SECURITY HARDENING",
+  "status": "production-ready",
   "forge": {
     "core": {
       "status": "completed",
@@ -27,9 +27,10 @@
       "notes": "CLI com init(), generator(), deploy() pendente"
     },
     "frontend": {
-      "status": "pending",
-      "version": null,
-      "notes": "Interface web para criação de protocolos pendente"
+      "status": "completed",
+      "version": "0.5.3",
+      "completed_at": "2026-01-21T00:00:00Z",
+      "notes": "Interface Premium Neural reforçada com segurança e validação EVM"
     },
     "testing": {
       "status": "in_progress",
@@ -90,4 +91,3 @@
     "ecosystem_name": "NEØ Ecosystem"
   }
 }
-
