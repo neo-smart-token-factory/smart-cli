@@ -52,12 +52,6 @@
         "last_updated": "2024-01-01T00:00:00Z"
       },
       {
-        "name": "NEOFLOW",
-        "status": "concept",
-        "created_at": "2024-01-01T00:00:00Z",
-        "last_updated": "2024-01-01T00:00:00Z"
-      },
-      {
         "name": "TEST_TOKEN",
         "status": "draft",
         "created_at": "2026-01-20T12:40:41.739Z",
@@ -71,6 +65,22 @@
       }
     ],
     "deployed": [
+      {
+        "name": "NEOFLW (TON)",
+        "symbol": "NEOFLW",
+        "address": "EQAPngkZmIa1jbtQZJ9NSPZ-3sh3PnD8bp5cvxNeAEeEBTfl",
+        "network": "ton",
+        "deployed_at": "2026-01-31T09:35:00Z",
+        "notes": "Arquitetura Tact v0.5.3 | AA-Ready"
+      },
+      {
+        "name": "NEOFlowOFF",
+        "symbol": "NEOFLW",
+        "address": "0x41F4ff3d45DED9C1332e4908F637B75fe83F5d6B",
+        "network": "base",
+        "deployed_at": "2026-01-31T08:15:00Z",
+        "notes": "Powered by NΞØ SMART FACTORY v0.5.3"
+      },
       {
         "name": "SMART_TEST",
         "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
