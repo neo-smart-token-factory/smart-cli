@@ -8,6 +8,7 @@ const { Command } = require('commander');
 const initCommand = require('../commands/init');
 const deployCommand = require('../commands/deploy');
 const doctorCommand = require('../commands/doctor');
+const auditCommand = require('../commands/audit');
 const NeoInternalOps = require('../ops-handler');
 
 const program = new Command();
@@ -37,6 +38,11 @@ program
   .option('-c, --contract <address>', 'Endereço do contrato para analisar')
   .option('-o, --output <file>', 'Exportar relatório (md/pdf)')
   .action(doctorCommand);
+
+program
+  .command('audit')
+  .description('Validar integridade dos artefatos e manifestos MIO')
+  .action(auditCommand);
 
 // Internal Ops & Simulation Commands
 program

@@ -27,21 +27,19 @@ Agora você pode usar `nsf` ou `neo-smart-factory` de qualquer lugar!
 │ ▓▓▓ COMANDOS PRINCIPAIS (v0.5.3)                                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ └─ nsf init                                                                 │
-│    └─ Inicializa um novo ambiente de token (Phase 1)                        │
-│ └─ nsf token draft                                                          │
-│    └─ Cria rascunho de token em tokens/*.json (Phase 1)                     │
-│ └─ nsf token deploy                                                         │
-│    └─ Deploy de token (Phase 2 Bridge) via smart-core (Production)          │
-│ └─ nsf simulate                                                             │
-│    └─ Simulação completa de Security/Econ/Risk (Phase 1)                    │
-│ └─ nsf token forge                                                          │
-│    └─ Deploy Real (Phase 2 Bridge) via smart-core (Production)              │
+│    └─ Inicializa um novo ambiente de token                                  │
+│ └─ nsf deploy                                                               │
+│    └─ Deploy de contratos com validação MIO & Provas de Segurança           │
+│ └─ nsf audit                                                                │
+│    └─ Validação de integridade do Logic Vault (MIO Proofs)                  │
 │ └─ nsf doctor                                                               │
-│    └─ Diagnóstico de saúde e auditoria do protocolo (Phase 1)               │
+│    └─ Diagnóstico de saúde e auditoria do protocolo                         │
+│ └─ nsf simulate                                                             │
+│    └─ Simulação completa de Security/Econ/Risk                              │
 │ └─ nsf marketing                                                            │
-│    └─ Motor de narrativa e geração de conteúdo (Phase 1)                    │
+│    └─ Motor de narrativa e geração de conteúdo                              │
 │ └─ nsf status                                                               │
-│    └─ Verifica o progresso e estado da factory (Phase 1)                    │
+│    └─ Verifica o progresso e estado da factory                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
