@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Telegram System fallback variables */
+  --tg-theme-bg-color: #050505;
+  --tg-theme-text-color: #ffffff;
+  --tg-theme-hint-color: rgba(255, 255, 255, 0.5);
+  --tg-theme-link-color: #D6FF00;
+  --tg-theme-button-color: #D6FF00;
+  --tg-theme-button-text-color: #050505;
+
+  /* NΞØ Custom Vars */
+  --neon-acid: #D6FF00;
+  --cyber-black: #050505;
+
+  /* Telegram viewport & safe area (Bot API 8.0+). Fallbacks when outside TWA. */
+  --tg-viewport-height-fallback: 100vh;
+  --tg-viewport-stable-height-fallback: 100vh;
+  --app-safe-top: var(--tg-safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --app-safe-bottom: var(--tg-safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  --app-safe-left: var(--tg-safe-area-inset-left, env(safe-area-inset-left, 0px));
+  --app-safe-right: var(--tg-safe-area-inset-right, env(safe-area-inset-right, 0px));
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-color: var(--tg-theme-bg-color, #050505);
+  color: var(--tg-theme-text-color, #fff);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for Cyber aesthetic */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 255, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 255, 0, 0.3);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-border {
+  border: 1px solid var(--neon-acid);
+  box-shadow: 0 0 15px rgba(214, 255, 0, 0.1);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 10px rgba(214, 255, 0, 0.3);
+}
+
+/* Optimization for TWA MainButton colors */
+.twa-main-button {
+  background-color: var(--tg-theme-button-color, #D6FF00) !important;
+  color: var(--tg-theme-button-text-color, #050505) !important;
+}
+
+/* Telegram Mini App layout: viewport height + safe area padding. Scrolling stays inside .twa-scroll. */
+.twa-viewport {
+  height: var(--tg-viewport-stable-height, var(--tg-viewport-stable-height-fallback, 100vh));
+  min-height: var(--tg-viewport-stable-height, var(--tg-viewport-stable-height-fallback, 100vh));
+  padding-top: var(--app-safe-top);
+  padding-bottom: var(--app-safe-bottom);
+  padding-left: max(var(--app-safe-left), 1rem);
+  padding-right: max(var(--app-safe-right), 1rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.twa-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#app {
+  height: 100%;
+  min-height: 100%;
+}
