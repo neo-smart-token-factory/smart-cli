@@ -1,0 +1,67 @@
+{
+  "name": "",
+  "symbol": "",
+  "status": "draft",
+  "created_at": "",
+  "last_updated": "",
+  "tokenomics": {
+    "total_supply": null,
+    "decimals": 18,
+    "distribution": {
+      "team": null,
+      "investors": null,
+      "community": null,
+      "treasury": null,
+      "liquidity": null
+    },
+    "vesting": {
+      "team_vesting": {
+        "amount": null,
+        "duration_days": null,
+        "cliff_days": null,
+        "revocable": false
+      },
+      "investor_vesting": {
+        "amount": null,
+        "duration_days": null,
+        "cliff_days": null,
+        "revocable": false
+      }
+    }
+  },
+  "narrative": {
+    "manifesto": "",
+    "story": "",
+    "rituals": [],
+    "values": []
+  },
+  "technical": {
+    "mintable": false,
+    "burnable": false,
+    "pausable": false,
+    "governance": false,
+    "roles": []
+  },
+  "dapp": {
+    "planned": false,
+    "description": "",
+    "features": []
+  },
+  "pool": {
+    "planned": false,
+    "initial_liquidity": null,
+    "platform": null
+  },
+  "audit": {
+    "status": "pending",
+    "risks": [],
+    "recommendations": []
+  },
+  "deployment": {
+    "network": null,
+    "estimated_gas": null,
+    "estimated_cost": null,
+    "preview": false
+  }
+}
+

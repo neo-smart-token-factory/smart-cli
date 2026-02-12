@@ -1,0 +1,192 @@
+{
+  "token": "NEOFLOW",
+  "timestamp": "2026-01-31T11:14:31.825Z",
+  "status": "simulating",
+  "security": {
+    "supply_valid": {
+      "valid": false,
+      "error": "Supply total não configurado ou zero",
+      "critical": true
+    },
+    "owner_valid": {
+      "valid": false,
+      "error": "Owner não configurado ou é zero address",
+      "critical": true
+    },
+    "price_valid": {
+      "valid": true,
+      "warning": "Preço não configurado (pode ser intencional para token gratuito)",
+      "critical": false
+    },
+    "locks_adequate": {
+      "valid": false,
+      "locks": {
+        "mintable": false,
+        "burnable": false,
+        "pausable": false,
+        "governance": false
+      },
+      "warning": "Token sem pausable não tem proteção de emergência"
+    },
+    "wallet_connected": {
+      "valid": false,
+      "note": "Verificar conexão real da wallet antes do deploy"
+    },
+    "overall_score": 20,
+    "passed": false,
+    "warnings": [
+      "Token sem pausable não tem proteção de emergência"
+    ],
+    "errors": [
+      "Supply total não configurado ou zero",
+      "Owner não configurado ou é zero address"
+    ]
+  },
+  "tokenomics": {
+    "model_makes_sense": {
+      "valid": true
+    },
+    "infinite_mint_risk": {
+      "risk": false
+    },
+    "exploit_risk": {
+      "risk": true,
+      "error": "Riscos de exploit identificados: Sem pausable - não há como parar em caso de exploit",
+      "risks": [
+        "Sem pausable - não há como parar em caso de exploit"
+      ]
+    },
+    "overflow_risk": {
+      "risk": false
+    },
+    "distribution_valid": {
+      "valid": false,
+      "error": "Supply zero"
+    },
+    "overall_score": 60,
+    "passed": false,
+    "warnings": [],
+    "errors": [
+      "Riscos de exploit identificados: Sem pausable - não há como parar em caso de exploit",
+      "Supply zero"
+    ]
+  },
+  "rituals": {
+    "mint_once_per_wallet": {
+      "makes_sense": true,
+      "analysis": "Sem restrição de mint por wallet"
+    },
+    "initial_supply_impact": {
+      "risk": "low",
+      "analysis": "Supply inicial parece adequado",
+      "impact": "Baixo risco de impacto negativo na economia"
+    },
+    "fixed_price_barrier": {
+      "creates_barrier": false,
+      "analysis": "Preço fixo zero (gratuito) não cria barreira",
+      "recommendation": "Considerar se token gratuito é intencional"
+    },
+    "vesting_necessity": {
+      "necessary": true,
+      "hasVesting": true,
+      "analysis": "Vesting configurado adequadamente",
+      "risk": "Baixo"
+    },
+    "overall_assessment": "",
+    "recommendations": []
+  },
+  "narrative": {
+    "neo_protocol_integration": {
+      "integrated": true,
+      "analysis": "Narrativa integra com NΞØ Protocol",
+      "recommendation": null
+    },
+    "neo_token_integration": {
+      "integrated": false,
+      "analysis": "Não menciona NEO Token explicitamente",
+      "recommendation": "Opcional: conectar com NEO Token se relevante"
+    },
+    "flowoff_narrative": {
+      "integrated": false,
+      "analysis": "Narrativa não menciona elementos FlowOFF",
+      "recommendation": "Considerar integrar elementos culturais e rituais da FlowOFF"
+    },
+    "token_manifesto": {
+      "exists": false,
+      "analysis": "Manifesto não encontrado",
+      "recommendation": "CRÍTICO: Criar manifesto antes do deploy (NEO::token manifest)"
+    },
+    "overall_coherence": "",
+    "score": 0
+  },
+  "sevenDaySimulation": {
+    "day1": {
+      "day": 1,
+      "estimated_holders": 1,
+      "estimated_volume_eth": "0.0000",
+      "estimated_volume_usd": "0.00",
+      "risk_score": 44,
+      "risk_level": "high",
+      "adoption_rate": "5.00%"
+    },
+    "day3": {
+      "day": 3,
+      "estimated_holders": 1,
+      "estimated_volume_eth": "0.0000",
+      "estimated_volume_usd": "0.00",
+      "risk_score": 44,
+      "risk_level": "high",
+      "adoption_rate": "4.23%"
+    },
+    "day7": {
+      "day": 7,
+      "estimated_holders": 1,
+      "estimated_volume_eth": "0.0000",
+      "estimated_volume_usd": "0.00",
+      "risk_score": 44,
+      "risk_level": "high",
+      "adoption_rate": "3.03%"
+    },
+    "summary": {
+      "projected_holders": 1,
+      "projected_volume_7d_eth": "0.0000",
+      "projected_volume_7d_usd": "0.00",
+      "average_risk_score": 44,
+      "risk_level": "high",
+      "adoption_trend": "growing",
+      "recommendation": "REVISAR antes do deploy. Risco alto identificado."
+    },
+    "adoption_curve": {
+      "type": "exponential_decay",
+      "peak_day": 1,
+      "stabilization_day": 7,
+      "analysis": "Crescimento inicial rápido com decaimento exponencial"
+    },
+    "behavior_analysis": [
+      {
+        "pattern": "Vesting configurado",
+        "impact": "Reduz risco de dump inicial",
+        "risk": "low"
+      }
+    ]
+  },
+  "verdict": {
+    "can_deploy": false,
+    "overall_score": 50,
+    "status": "NEEDS_REVIEW",
+    "critical_issues": [
+      "Supply total não configurado ou zero",
+      "Owner não configurado ou é zero address",
+      "Riscos de exploit identificados: Sem pausable - não há como parar em caso de exploit",
+      "Supply zero",
+      "MANIFESTO não encontrado"
+    ],
+    "deployment_ready": false
+  },
+  "criticalRecommendations": [
+    "⚠️ CORRIGIR problemas críticos antes do deploy",
+    "📝 CRIAR MANIFESTO (NEO::token manifest)",
+    "🔐 REVISAR configurações de segurança",
+    "💰 REVISAR tokenômica"
+  ]
+}

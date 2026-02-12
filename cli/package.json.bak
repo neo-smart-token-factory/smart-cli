@@ -1,0 +1,30 @@
+{
+  "name": "@neo-smart/cli",
+  "version": "0.5.3",
+  "description": "NΞØ SMART FACTORY — Unified CLI Tool",
+  "main": "ops-handler.js",
+  "bin": {
+    "nxf": "./bin/index.js",
+    "neo-smart-factory": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ops": "node bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "blockchain",
+    "tokens",
+    "neo-smart-factory",
+    "nxf"
+  ],
+  "author": "NΞØ Protocol",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^16.4.0",
+    "inquirer": "^9.2.0",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0"
+  }
+}
