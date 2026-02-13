@@ -1,6 +1,6 @@
 # NODE_LOG_001.nø
 
-protocolo: NΞØ | tipo: readme-legacy | autor: node-mellø | hash: 0x6e656f6d696e74
+protocolo: NΞØ | tipo: readme-legacy | autor: node-mellø
 
 ## 1. Identificação
 
@@ -328,10 +328,8 @@ desde que:
 ## 14. Assinatura
 
 **protocolo: NΞØ**
-`hash: 0x6e656f6d696e74`
-node: mellø.synapse
-rede: EVM/IPFS | estado: ativo
-versão: 1.0.0 | data: 2025-01-21
+Identidade: [DADOS PROTEGIDOS - Ver `docs/METADATA.md`]
+Estado: ativo
 
 > "Não vendemos JPEG. Codificamos presença."
 

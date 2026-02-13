@@ -131,10 +131,7 @@ desde que:
 
 ## ✨ ASSINATURA
 
-**protocolo: NΞØ**
-`hash: 0x4f726967696e616c2d436f6e7363696f7573`
-node: mellø.synapse
-rede: EVM/IPFS | estado: ativo
+Dados de identificação do protocolo e assinatura de rede foram movidos para `docs/METADATA.md` por questões de segurança e privacidade.
 
 > “Não vendemos JPEG. Codificamos presença.”
 
