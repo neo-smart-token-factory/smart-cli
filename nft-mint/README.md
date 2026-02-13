@@ -46,8 +46,8 @@ Os atributos são campos semânticos, não apenas visuais.
 ## 💾 EXECUÇÃO LOCAL
 
 ```bash
-git clone https://github.com/kauntdewn1/nft-manager.git
-cd nft-manager
+git clone https://github.com/neo-smart-token-factory/smart-nft.git
+cd smart-nft
 npm install
 ipfs init
 ipfs daemon  # mantenha este nó acordado
