@@ -17,6 +17,18 @@ A execução do código é também um ato performativo — um acordo entre máqu
 
 ---
 
+## 📚 DOCUMENTAÇÃO
+
+Toda a documentação técnica e guias de uso foram organizados na pasta `docs/`:
+
+*   [**Guia de Mintagem**](docs/COMO_MINTAR.md) - Ritual de criação passo a passo.
+*   [**Configuração de Ambiente**](docs/ENV_SETUP.md) - Preparação das variáveis e segurança.
+*   [**Guia Completo**](docs/MINT_GUIDE.md) - Referência técnica detalhada.
+*   [**Mintápido**](docs/MINT_RAPIDO.md) - Flush-cache e mint em segundos.
+*   [**README Mint**](docs/README_MINT.md) - Visão geral do módulo de mint.
+
+---
+
 ## ⚙️ FUNÇÕES NΞØ CORE
 
 * 🧬 Mint contínuo com metadados únicos e persistentes
@@ -51,6 +63,7 @@ Interface acessível em:
 
 ```
 neo.mint/
+├── docs/                 # Documentação e guias técnicos
 ├── src/                  # Interfaces reativas
 ├── server/               # IPFS + API
 ├── scripts/              # Automação e contratos
