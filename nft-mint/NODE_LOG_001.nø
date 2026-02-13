@@ -8,7 +8,7 @@ Título original: NEØ.MINT — Ritual Engine v1.0
 Versão: 1.0.1
 Licença: MIT
 Autor: @node-mello (neo-protocol)
-Repositório base: https://github.com/kauntdewn1/nft-manager (Legacy)
+Repositório base: https://github.com/neomello/nft-manager (Legacy)
 Repositório atual: https://github.com/neo-smart-token-factory/smart-nft
 
 ---
@@ -349,5 +349,5 @@ A cada linha de código, o ritual continua.
 
 | Data | Evento | Detalhes |
 | :--- | :--- | :--- |
-| 2026-02-13 | Migração de Org | De `kauntdewn1/nft-manager` para `neo-smart-token-factory/smart-nft` |
+| 2026-02-13 | Migração de Org | De `neomello/nft-manager` para `neo-smart-token-factory/smart-nft` |
 | 2026-02-13 | Refatoração de Docs | Movidos guias para pasta `docs/` e ignorados no git. |
